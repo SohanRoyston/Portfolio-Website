@@ -1,2 +1,2 @@
 ﻿# HTML-Projects
-These are mypersonal and educational codes.
+These are my personal and educational codes.
