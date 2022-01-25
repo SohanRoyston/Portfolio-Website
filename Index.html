@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Sohan Royston</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="Logo">Logo</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#sec">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+    </header>
+
+    <section>
+        <img src="/Images/stars.png" id="Stars">
+        <img src="/Images/moon.png" id="Moon">
+        <img src="/Images/mountains_behind.png" id="Mountains_Behind">
+        <h2 id="text">Sohan Royston</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="/Images/mountains_front.png" id="Mountains_Front">
+    </section>
+
+    <div class="sec" id="sec">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et diam dolor. 
+            Vestibulum pretium mi ac nisl porttitor laoreet. Aenean lacus nisl, viverra a arcu in, accumsan 
+            tristique nibh. Phasellus rutrum sollicitudin lorem vitae vehicula. Vivamus finibus vel urna sit amet hendrerit. Nulla convallis ut est auctor ultrices. 
+            Aenean blandit ullamcorper purus eget. <br><br> Curabitur lacinia leo erat, at laoreet nibh finibus ac. Duis imperdiet tortor quis nunc sagittis mollis. Proin blandit diam ut bibendum 
+            tincidunt. Quisque congue neque eu sapien lobortis luctus. Maecenas interdum tellus quis nibh efficitur, eget blandit risus accumsan. Proin at molestie orci. <br><br>Nunc ac fermentum odio. 
+            Nunc diam nibh, iaculis id tincidunt ut, tincidunt ut erat. Nulla vel condimentum arcu. Morbi id enim consectetur, 
+            tempor magna maximus, fermentum sem. <br><br> Nam posuere sed augue at malesuada. Integer sagittis, quam ac ultrices pharetra, 
+            quam risus condimentum elit, ut fermentum nulla purus in ligula. Suspendisse venenatis, odio non condimentum 
+            efficitur, dolor ligula condimentum mi, feugiat viverra nulla odio egestas eros.
+        </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('Stars');
+        let moon = document.getElementById('Moon');
+        let mountains_Behind = document.getElementById('Mountains_Behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_Front = document.getElementById('Mountains_Front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1 + 'px';
+            mountains_Behind.style.top = value * 0.5 + 'px';
+            mountains_Front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.7 + 'px';
+        })
+    </script>
+
+    <div class="works">
+        <h2>Work Overview</h2>
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. <br>
+            It has roots in a piece of classical Latin literature from 45 BC, making it over 
+            2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney 
+            College in Virginia, looked up one of the more obscure Latin words, consectetur, 
+            from a Lorem Ipsum passage, and going through the cites of the word in classical 
+            literature, discovered the undoubtable source.</p>
+        <ul class="images">
+            <li><a href="#"><img src="/Images/Raptors.png" alt="Raptors"></a></li>
+            <li><a href="#"><img src="/Images/Abstract galaxy1.png" alt="Galaxy"></a></li>
+            <li><a href="#"><img src="/Images/Beats Solo 3.png" alt="Beats Poster"></a></li>
+            <li><a href="#"><img src="/Images/Mushroom_1.png" alt="Mushroom"></a></li>
+            <li><a href="#"><img src="/Images/Environment_Scene_01_1_0005.png" alt="Environment"></a></li>
+        </ul>
+        <a href="#" class="workbutton" id="workbtn">More</a>
+    </div>
+</body>
+</html>
